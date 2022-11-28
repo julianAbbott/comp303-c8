@@ -23,11 +23,8 @@ public class Directory extends AbstractNode implements Iterable<Node>
 	}
 
 	public void accept(NodeVisitor pVisitor) {
-
-		
+		execute(pVisitor);
 	}
-
-
 
 	protected void execute(NodeVisitor pVisitor) { 
 		pVisitor.DirectoryVisitor(this);

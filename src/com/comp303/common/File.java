@@ -9,10 +9,16 @@ public class File extends AbstractNode
 		super(pName);
 	}
 
+
+
+
+	@Override
 	public void accept(NodeVisitor pVisitor) {
 		// TODO Auto-generated method stub
-		
+		super.accept(pVisitor);
 	}
+
+
 
 
 	protected void execute(NodeVisitor pVisitor ) {

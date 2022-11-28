@@ -17,10 +17,12 @@ public class SymbolicLink extends AbstractNode
 		return "Link to " + aNode.name();
 	}
 
+
+
 	@Override
 	public void accept(NodeVisitor pVisitor) {
 		// TODO Auto-generated method stub
-		
+		super.accept(pVisitor);
 	}
 
 	protected void execute(NodeVisitor pVisitor) {
