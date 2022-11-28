@@ -27,6 +27,7 @@ public class SymbolicLink extends AbstractNode
 
 	protected void execute(NodeVisitor pVisitor) {
 		pVisitor.SymbolicLinkVisitor(this);
+		aNode.accept(pVisitor);
 		
 	}
 

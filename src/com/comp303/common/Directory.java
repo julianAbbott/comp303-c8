@@ -22,8 +22,12 @@ public class Directory extends AbstractNode implements Iterable<Node>
 		return Collections.unmodifiableList(aNodes).iterator();
 	}
 
+
+
+	@Override
 	public void accept(NodeVisitor pVisitor) {
-		execute(pVisitor);
+		// TODO Auto-generated method stub
+		super.accept(pVisitor);
 	}
 
 	protected void execute(NodeVisitor pVisitor) { 
