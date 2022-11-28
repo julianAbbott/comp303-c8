@@ -22,9 +22,17 @@ public class Directory extends AbstractNode implements Iterable<Node>
 		return Collections.unmodifiableList(aNodes).iterator();
 	}
 
-	@Override
 	public void accept(NodeVisitor pVisitor) {
-		// TODO Auto-generated method stub
+
 		
+	}
+
+
+
+	protected void execute(NodeVisitor pVisitor) { 
+		pVisitor.DirectoryVisitor(this);
+		for (Node n : aNodes) {
+			n.accept(pVisitor);
+		}		
 	}
 }

@@ -22,4 +22,10 @@ public class SymbolicLink extends AbstractNode
 		// TODO Auto-generated method stub
 		
 	}
+
+	protected void execute(NodeVisitor pVisitor) {
+		pVisitor.SymbolicLinkVisitor(this);
+		
+	}
+
 }

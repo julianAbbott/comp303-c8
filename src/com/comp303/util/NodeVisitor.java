@@ -10,6 +10,6 @@ public interface NodeVisitor {
 	
 	void FileVisitor(File pFile);
 	
-	void SymbolicLinkVisitor(SymbolicLink pSymbo );
+	void SymbolicLinkVisitor(SymbolicLink pSymbol);
 
 }

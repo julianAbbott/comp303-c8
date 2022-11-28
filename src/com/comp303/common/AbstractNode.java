@@ -1,5 +1,6 @@
 package com.comp303.common;
 
+import com.comp303.util.NodeVisitor;
 
 abstract class AbstractNode implements Node
 {
@@ -14,4 +15,15 @@ abstract class AbstractNode implements Node
 	{
 		return aName;
 	}
+	
+	@Override
+	public void accept(NodeVisitor pVisitor) {
+		execute(pVisitor);	
+
+	}
+
+	protected abstract void execute(NodeVisitor pVisitor);
+
+	
+
 }

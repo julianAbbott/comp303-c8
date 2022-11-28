@@ -9,9 +9,13 @@ public class File extends AbstractNode
 		super(pName);
 	}
 
-	@Override
 	public void accept(NodeVisitor pVisitor) {
 		// TODO Auto-generated method stub
 		
+	}
+
+
+	protected void execute(NodeVisitor pVisitor ) {
+		pVisitor.FileVisitor(this);
 	}
 }
