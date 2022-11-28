@@ -17,7 +17,7 @@ public  class TestPrettyPrintVisitor {
 	static SymbolicLink myLink = new SymbolicLink("link to very bad virus", myFile3); 
 	static Directory myDir = new Directory("julian_stuff", myFile, myFile2, myLink);
 	static NodeVisitor v = new PrettyPrintVisitor();
-
+	static CountVisitor countV = new CountVisitor();
 	
 	
 	public static void TestFileVisitor() {
@@ -28,11 +28,17 @@ public  class TestPrettyPrintVisitor {
 		myLink.accept(v);
 	}
 	
-	@Test
+	
 	public static void TestDirectoryVisitor() {
 		myDir.accept(v);
 	}
 	
+	@Test
+	public void TestCountVisitor () {
+		myDir.accept(countV);
+		assertEquals(countV.getCount(), 5);
+	
+	}
 	public static void main (String[] args) {
 //		TestFileVisitor();
 //		TestSymboloicLinkVisitor();

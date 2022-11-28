@@ -4,39 +4,28 @@ import com.comp303.common.*;
 
 
 public class CountVisitor implements NodeVisitor {
-	private int aFileCount;
-	private int aDircount;
-	private int aSymbolicLinkCount;
+
+	private int aCount;
 	
 
 	@Override
 	public void DirectoryVisitor(Directory pDir) {
-		// TODO Auto-generated method stub
-		
+		aCount = getCount() + 1;
 	}
 
 	@Override
 	public void FileVisitor(File pFile) {
-		// TODO Auto-generated method stub
-		
+		aCount = getCount() + 1;
 	}
 
 	@Override
 	public void SymbolicLinkVisitor(SymbolicLink pSymbol) {
-		// TODO Auto-generated method stub
-		
+		aCount = getCount() + 1;
 	}
 
-	public int getFileCount() {
-		return aFileCount;
+	public int getCount() {
+		return aCount;
 	}
 
-	public int getDircount() {
-		return aDircount;
-	}
-
-	public int getSymbolicLinkCount() {
-		return aSymbolicLinkCount;
-	}
 
 }
