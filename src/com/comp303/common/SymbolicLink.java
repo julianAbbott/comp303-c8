@@ -2,7 +2,7 @@ package com.comp303.common;
 
 import com.comp303.util.NodeVisitor;
 
-class SymbolicLink extends AbstractNode
+public class SymbolicLink extends AbstractNode
 {
 	private final Node aNode;
 	

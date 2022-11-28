@@ -2,7 +2,7 @@ package com.comp303.common;
 
 import com.comp303.util.NodeVisitor;
 
-class File extends AbstractNode
+public class File extends AbstractNode
 {
 	public File(String pName)
 	{
